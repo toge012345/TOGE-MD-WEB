@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
                 },
                 printQRInTerminal: false,
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
-                browser: [ "TOGE-MD", "Chrome", "20.0.04" ],
+                browser: [ "Ubuntu", "Chrome", "20.0.04" ],
              });
              if(!XeonBotInc.authState.creds.registered) {
                 await delay(1500);
