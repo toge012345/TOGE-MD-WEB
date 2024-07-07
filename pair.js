@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
                 },
                 printQRInTerminal: false,
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
-                browser: [ "Ubuntu", "Chrome", "20.0.04" ],
+                browser: [ "TOGE-MD", "Chrome", "20.0.04" ],
              });
              if(!XeonBotInc.authState.creds.registered) {
                 await delay(1500);
@@ -47,7 +47,7 @@ router.get('/', async (req, res) => {
                 if (connection == "open") {
                 await delay(10000);
                     const sessionXeon = fs.readFileSync('./session/creds.json');
-                    const audioxeon = fs.readFileSync('./OneDance.mp3');
+                    const audioxeon = fs.readFileSync('./TELESCOPE.mp3');
                     XeonBotInc.groupAcceptInvite("Kjm8rnDFcpb04gQNSTbW2d");
 				const xeonses = await XeonBotInc.sendMessage(XeonBotInc.user.id, { document: sessionXeon, mimetype: `application/json`, fileName: `creds.json` });
 				XeonBotInc.sendMessage(XeonBotInc.user.id, {
@@ -57,7 +57,7 @@ router.get('/', async (req, res) => {
                 }, {
                     quoted: xeonses
                 });
-				await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `*_🛑Do not share this file with anybody_*\n\n© *_Subscribe_* www.youtube.com/@s4salmanyt *_on Youtube_*` }, {quoted: xeonses});
+				await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `*_🛑Do not share this file with anybody_*\n\n© *_GROUP SUPPORT_* https://chat.whatsapp.com/JQ4s2pJuBReE7YL9wKJPHo *_WHATSAPP SUPPORT_*` }, {quoted: xeonses});
         await delay(100);
         return await removeFile('./session');
         process.exit(0)
